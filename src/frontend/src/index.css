@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk", "Noto Sans Devanagari", "Noto Sans Telugu",
+      sans-serif;
+    --font-body: "DM Sans", "Noto Sans Devanagari", "Noto Sans Telugu",
+      sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --radius: 0.75rem;
+
+    --background: 0.98 0.008 230;
+    --foreground: 0.18 0.025 245;
+    --card: 1 0.004 230;
+    --card-foreground: 0.18 0.025 245;
+    --popover: 1 0.004 230;
+    --popover-foreground: 0.18 0.025 245;
+
+    --primary: 0.4 0.15 250;
+    --primary-foreground: 0.98 0.005 250;
+
+    --secondary: 0.95 0.012 230;
+    --secondary-foreground: 0.28 0.02 245;
+    --muted: 0.945 0.012 230;
+    --muted-foreground: 0.5 0.015 235;
+
+    --accent: 0.6 0.15 172;
+    --accent-foreground: 0.98 0.005 172;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+
+    --success: 0.58 0.16 150;
+    --success-foreground: 0.98 0.005 150;
+    --warning: 0.72 0.15 85;
+    --warning-foreground: 0.2 0.03 85;
+
+    --border: 0.9 0.01 230;
+    --input: 0.9 0.01 230;
+    --ring: 0.4 0.15 250;
+
+    --chart-1: 0.4 0.15 250;
+    --chart-2: 0.6 0.15 172;
+    --chart-3: 0.55 0.12 240;
+    --chart-4: 0.7 0.12 190;
+    --chart-5: 0.5 0.1 260;
+
+    --sidebar: 0.965 0.01 230;
+    --sidebar-foreground: 0.18 0.025 245;
+    --sidebar-primary: 0.4 0.15 250;
+    --sidebar-primary-foreground: 0.98 0.005 250;
+    --sidebar-accent: 0.93 0.02 230;
+    --sidebar-accent-foreground: 0.28 0.02 245;
+    --sidebar-border: 0.9 0.01 230;
+    --sidebar-ring: 0.4 0.15 250;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.4 0.15 250) 0%,
+      oklch(0.55 0.13 225) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      oklch(0.99 0.006 230) 0%,
+      oklch(0.955 0.012 230) 100%
+    );
+  }
+
+  .dark {
+    --background: 0.16 0.02 250;
+    --foreground: 0.95 0.01 230;
+    --card: 0.2 0.022 250;
+    --card-foreground: 0.95 0.01 230;
+    --popover: 0.22 0.022 250;
+    --popover-foreground: 0.95 0.01 230;
+
+    --primary: 0.72 0.14 245;
+    --primary-foreground: 0.16 0.02 250;
+
+    --secondary: 0.24 0.022 250;
+    --secondary-foreground: 0.85 0.01 230;
+    --muted: 0.24 0.022 250;
+    --muted-foreground: 0.58 0.015 235;
+
+    --accent: 0.72 0.13 175;
+    --accent-foreground: 0.16 0.02 175;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.16 0.02 22;
+
+    --success: 0.62 0.16 150;
+    --success-foreground: 0.16 0.02 150;
+    --warning: 0.75 0.15 85;
+    --warning-foreground: 0.16 0.02 85;
+
+    --border: 0.28 0.02 250;
+    --input: 0.28 0.02 250;
+    --ring: 0.72 0.14 245;
+
+    --chart-1: 0.72 0.14 245;
+    --chart-2: 0.72 0.13 175;
+    --chart-3: 0.6 0.12 240;
+    --chart-4: 0.7 0.12 190;
+    --chart-5: 0.55 0.12 260;
+
+    --sidebar: 0.18 0.022 250;
+    --sidebar-foreground: 0.95 0.01 230;
+    --sidebar-primary: 0.72 0.14 245;
+    --sidebar-primary-foreground: 0.16 0.02 250;
+    --sidebar-accent: 0.24 0.022 250;
+    --sidebar-accent-foreground: 0.85 0.01 230;
+    --sidebar-border: 0.28 0.02 250;
+    --sidebar-ring: 0.72 0.14 245;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.72 0.14 245) 0%,
+      oklch(0.62 0.13 220) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      oklch(0.19 0.02 250) 0%,
+      oklch(0.16 0.02 250) 100%
+    );
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .bg-gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+
+  .text-gradient {
+    background-image: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

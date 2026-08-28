@@ -1,0 +1,19 @@
+{
+  "overview": "MediReach is a fully trilingual (English, Telugu, Hindi) rural healthcare platform prototype connecting patients, doctors, pharmacists, and administrators with role-based dashboards and functional care-management pages.",
+  "features": [
+    "Trilingual English/Telugu/Hindi interface with persistent language selector",
+    "Role-based demo login for Patient, Pharmacist, Doctor, and Healthcare Admin",
+    "Four functional role dashboards with mock data and charts",
+    "Eight prototype pages: appointments, referrals, teleconsultation, triage, diagnostics, medicine availability, high-risk follow-up, facility monitoring",
+    "Offline/online resilience and accessibility for low-connectivity rural use"
+  ],
+  "category": "healthcare",
+  "tags": [
+    "healthcare",
+    "rural-health",
+    "trilingual",
+    "prototype",
+    "public-health"
+  ],
+  "last_updated": "2026-08-28T06:52:20.526Z"
+}
